@@ -3,8 +3,9 @@
 
 #include <QDialog>
 
-namespace Ui {
-class AddDialog;
+namespace Ui
+{
+    class AddDialog;
 }
 
 class AddDialog : public QDialog
@@ -15,6 +16,10 @@ public:
     explicit AddDialog(QWidget *parent = nullptr);
     ~AddDialog();
 
+public:
+    void addTagListItem(QString s);
+    QString getContent();
+    QString getTag();
 private:
     Ui::AddDialog *ui;
 };

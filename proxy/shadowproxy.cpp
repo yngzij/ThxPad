@@ -9,6 +9,7 @@ ShadowProxy::ShadowProxy(QWidget *parent) :
     m_proxyWidget(parent)
 {
     SHADOW_WIDTH = 5;
+
     m_proxyWidget->installEventFilter(this);
     m_proxyWidget->setContentsMargins(SHADOW_WIDTH, SHADOW_WIDTH, SHADOW_WIDTH, SHADOW_WIDTH);
     m_pixmaps.append(QPixmap(":/shadow/skin/shadow_left"));
@@ -36,7 +37,7 @@ void ShadowProxy::drawShadow()
 {
 
     if(!m_proxyWidget) return;
-    qDebug() << "111" << '\n';
+
     QPainter painter(m_proxyWidget);
     int width = m_proxyWidget->width();
     int height = m_proxyWidget->height();

@@ -3,14 +3,15 @@
 #include <QDesktopWidget>
 #include <QApplication>
 
-#include "shadowproxy.h"
+#include "proxy/shadowproxy.h"
 
 ProxyWidget::ProxyWidget(QWidget *child) :
     QObject((QObject *)child),
     m_ProxyWidget(child)
 {
     m_shadowProxy = new ShadowProxy(child);
-    //child->setWindowFlags(Qt::FramelessWindowHint);
+
+    child->setWindowFlags(Qt::FramelessWindowHint);
     QRect screenRect = QApplication::desktop()->availableGeometry();
 
     int width, height;

@@ -3,8 +3,9 @@
 
 #include <QWidget>
 
-namespace Ui {
-class LogItemForm;
+namespace Ui
+{
+    class LogItemForm;
 }
 
 class LogItemForm : public QWidget
@@ -14,6 +15,12 @@ class LogItemForm : public QWidget
 public:
     explicit LogItemForm(QWidget *parent = nullptr);
     ~LogItemForm();
+
+    int getPlainTextHeight();
+    void setLog(QString &);
+    int getPlainTextWidth();
+private:
+    int getDivisionValue(int, int);
 
 private:
     Ui::LogItemForm *ui;

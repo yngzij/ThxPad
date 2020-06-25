@@ -3,14 +3,22 @@
 
 #include <QObject>
 
+
+class sqlite3;
 class Sql : public QObject
 {
     Q_OBJECT
 public:
     explicit Sql(QObject *parent = nullptr);
+    ~Sql();
 
-signals:
+    sqlite3 *getCur();
 
+private:
+    void initialize();
+    void sqlExec(const char *sql);
+
+    sqlite3 *m_sql;
 };
 
 #endif // SQL_H

@@ -4,13 +4,12 @@
 #include <QObject>
 #include <QWidget>
 
-
 class ShadowProxy;
 class ProxyWidget : public QObject
 {
     Q_OBJECT
 public:
-    explicit ProxyWidget(QWidget *child= nullptr);
+    explicit ProxyWidget(QWidget *child = nullptr);
 
 private:
     QWidget     *m_ProxyWidget;

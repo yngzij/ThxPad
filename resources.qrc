@@ -1,2 +1,19 @@
-<!DOCTYPE RCC>
-<RCC version="1.0"/>
+<RCC>
+    <qresource prefix="/shadow">
+        <file>skin/shadow_bottom.png</file>
+        <file>skin/shadow_left.png</file>
+        <file>skin/shadow_left_bottom.png</file>
+        <file>skin/shadow_left_top.png</file>
+        <file>skin/shadow_right.png</file>
+        <file>skin/shadow_right_bottom.png</file>
+        <file>skin/shadow_right_top.png</file>
+        <file>skin/shadow_top.png</file>
+    </qresource>
+    <qresource prefix="/icon">
+        <file>icon/icon_close.png</file>
+        <file>icon/icon_max.png</file>
+        <file>icon/icon_min.png</file>
+        <file>icon/icon_add.png</file>
+        <file>icon/icon_search.png</file>
+    </qresource>
+</RCC>

@@ -3,8 +3,9 @@
 
 #include <QWidget>
 
-namespace Ui {
-class ListItemForm;
+namespace Ui
+{
+    class ListItemForm;
 }
 
 class ListItemForm : public QWidget
@@ -14,6 +15,13 @@ class ListItemForm : public QWidget
 public:
     explicit ListItemForm(QWidget *parent = nullptr);
     ~ListItemForm();
+
+
+    void setTag(const QString &tag);
+private:
+    void initialize();
+private slots:
+    void on_lineEdit_tag_textEdited(const QString &arg1);
 
 private:
     Ui::ListItemForm *ui;

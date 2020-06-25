@@ -4,7 +4,10 @@
 #include <QWidget>
 
 QT_BEGIN_NAMESPACE
-namespace Ui { class Widget; }
+namespace Ui
+{
+    class Widget;
+}
 QT_END_NAMESPACE
 
 class Widget : public QWidget
@@ -15,6 +18,15 @@ public:
     Widget(QWidget *parent = nullptr);
     ~Widget();
 
+public slots:
+    void slot_addContentItem(QString);
+
+private slots:
+    void on_toolButton_close_clicked();
+
+
+private:
+    void initialize();
 private:
     Ui::Widget *ui;
 };
