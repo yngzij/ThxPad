@@ -18,7 +18,7 @@ public:
     ~SideForm();
 
 signals:
-    void signal_addContent(QString);
+    void signal_addContent(QString, QString);
 private slots:
     void on_toolButton_add_clicked();
     void addTag(QString s);

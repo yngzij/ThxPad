@@ -12,12 +12,11 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-
     QSplitter splitter;
     Widget w;
     SideForm sideForm;
 
-    QObject::connect(&sideForm, SIGNAL(signal_addContent(QString)), &w, SLOT(slot_addContentItem(QString)));
+    QObject::connect(&sideForm, SIGNAL(signal_addContent(QString, QString)), &w, SLOT(slot_addContentItem(QString, QString)));
     ProxyWidget pw(&splitter);
     Sql sql;
     splitter.setHandleWidth(1);

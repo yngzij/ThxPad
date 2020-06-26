@@ -19,6 +19,9 @@ public:
     int getPlainTextHeight();
     void setLog(QString &);
     int getPlainTextWidth();
+    void testHeight();
+    void setTag(QString &);
+private slots:
 private:
     int getDivisionValue(int, int);
 

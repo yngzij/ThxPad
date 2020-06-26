@@ -21,23 +21,19 @@ Widget::~Widget()
     delete ui;
 }
 
-void Widget::slot_addContentItem(QString i)
+void Widget::slot_addContentItem(QString i, QString tag)
 {
-    qDebug() << i;
     QListWidgetItem *listItem = new QListWidgetItem;
     LogItemForm *item = new LogItemForm;
 
     item->setLog(i);
+    item->setTag(tag);
+    ui->listWidget_content->insertItem(ui->listWidget_content->model()->rowCount(), listItem);
+    ui->listWidget_content->setItemWidget(listItem, item);
+    ui->listWidget_content->repaint();
     int h = item->getPlainTextHeight();
     int w = item->getPlainTextWidth();
-
-    qDebug() << h;
-
-    listItem->setSizeHint(QSize(w, h + 20));
-
-    ui->listWidget_content->insertItem(ui->listWidget_content->model()->rowCount(), listItem);
-    ui->listWidget_content->setWordWrap(true);
-    ui->listWidget_content->setItemWidget(listItem, item);
+    listItem->setSizeHint(QSize(w, h));
 }
 
 void Widget::initialize()

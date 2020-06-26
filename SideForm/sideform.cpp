@@ -46,7 +46,7 @@ void SideForm::on_toolButton_add_clicked()
         QString tag = m_addDialog->getTag();
         addTag(tag);
         m_addDialog->addTagListItem(tag);
-        emit signal_addContent(content);
+        emit signal_addContent(content, tag);
     }
     else
     {

@@ -19,9 +19,8 @@ public:
     ~Widget();
 
 public slots:
-    void slot_addContentItem(QString);
+    void slot_addContentItem(QString, QString);
 
-private slots:
     void on_toolButton_close_clicked();
 
 

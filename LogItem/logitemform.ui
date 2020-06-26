@@ -40,16 +40,66 @@
      <property name="sizeAdjustPolicy">
       <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
      </property>
+     <property name="undoRedoEnabled">
+      <bool>true</bool>
+     </property>
+     <property name="lineWrapMode">
+      <enum>QPlainTextEdit::WidgetWidth</enum>
+     </property>
      <property name="readOnly">
+      <bool>false</bool>
+     </property>
+     <property name="centerOnScroll">
       <bool>true</bool>
      </property>
     </widget>
    </item>
    <item row="1" column="0">
-    <widget class="QLabel" name="label_time">
-     <property name="text">
-      <string>time</string>
-     </property>
+    <widget class="QWidget" name="widget" native="true">
+     <layout class="QGridLayout" name="gridLayout_2">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_time">
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="label_tag">
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
     </widget>
    </item>
   </layout>
