@@ -6,6 +6,7 @@ AddDialog::AddDialog(QWidget *parent) :
     ui(new Ui::AddDialog)
 {
     ui->setupUi(this);
+    this->setWindowFlags(Qt::FramelessWindowHint);
 }
 
 AddDialog::~AddDialog()

@@ -42,6 +42,7 @@ void Widget::initialize()
     this->ui->widget_center->setStyleSheet("background-color:rgb(243, 244, 244)");
 
     this->ui->toolButton_max->setIcon(QIcon(":/icon/icon/icon_max"));
+
     this->ui->toolButton_min->setIcon(QIcon(":/icon/icon/icon_min"));
     this->ui->toolButton_close->setIcon(QIcon(":/icon/icon/icon_close"));
 
